@@ -1,29 +1,27 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import Layout from "../components/layout";
-import styles from "../styles/Home.module.css";
+import Layout from "../../components/layout";
 
-const Home: NextPage = () => {
+const Community: NextPage = () => {
   return (
-    <Layout title="Home" hasTabBar>
-      <div className="flex px-4 flex-col space-y-5 py-10">
-        {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-          <Link href={`/items/${i}`}>
-            <a key={i} className="flex justify-between border-b pb-4">
-              <div className="flex space-x-4">
-                <div className="w-20 h-20 bg-gray-400 rounded-md" />
-                <div className="pt-2 flex flex-col">
-                  <h3 className="text-sm font-bold text-gray-900">
-                    New iPhone 14
-                  </h3>
-                  <span className="text-xs text-gray-500">Black</span>
-                  <span className="font-bold mt-1 text-gray-900">$95</span>
-                </div>
+    <Layout hasTabBar title="동네생활">
+      <div className="px-4 py-10 space-y-8 ">
+        {[1, 2, 3, 4, 5].map((_, i) => (
+          <Link href={`/community/${i}`}>
+            <a key={i} className="flex flex-col items-start shadow-md px-4">
+              <span className="px-2 py-1 rounded-full text-xs font-semibold text-gray-700 bg-slate-300">
+                동네질문
+              </span>
+              <span className="mt-2 text-gray-700">
+                <span className="text-orange-500 font-semibold">Q.</span> What
+                is the best mandu restaurant?
+              </span>
+              <div className="w-full mt-5 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                <span>니꼬</span>
+                <span>18시간 전</span>
               </div>
-              <div className="flex items-end space-x-4">
-                <div className="flex space-x-0.5 justify-center items-center text-xs ">
+              <div className="flex space-x-5 text-gray-500 mt-3 py-2 border-t border-b w-full ">
+                <span className="flex items-center text-xs space-x-2">
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -35,12 +33,12 @@ const Home: NextPage = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     ></path>
                   </svg>
-                  <span>1</span>
-                </div>
-                <div className="flex justify-center items-center text-xs">
+                  <span>궁금해요 1</span>
+                </span>
+                <span className="flex items-center text-xs space-x-2">
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -55,27 +53,27 @@ const Home: NextPage = () => {
                       d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                     ></path>
                   </svg>
-                  <span>1</span>
-                </div>
+                  <span>답변 1</span>
+                </span>
               </div>
             </a>
           </Link>
         ))}
+
         <button className="fixed right-5 bottom-40 border rounded-full p-2 shadow-md transition-colors bg-blue-300 text-white hover:bg-blue-500 hover:text-blue-200">
           <svg
-            className="h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
-            aria-hidden="true"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-            />
+              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+            ></path>
           </svg>
         </button>
       </div>
@@ -83,4 +81,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Community;
