@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import FloattingButton from "../../components/floating-button";
 import Layout from "../../components/layout";
 // aspect-video를 이용하여 비디오 화면처럼 자동으로 16:9 비율로 만듬
 
@@ -17,7 +18,7 @@ const Live: NextPage = () => {
             </a>
           </Link>
         ))}
-        <button className="fixed right-5 bottom-40 border rounded-full p-2 shadow-md border-transparent transition-colors bg-blue-300 text-white hover:bg-blue-500 hover:text-blue-200">
+        <FloattingButton href="/live/create">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -32,7 +33,7 @@ const Live: NextPage = () => {
               d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
             ></path>
           </svg>
-        </button>
+        </FloattingButton>
       </div>
     </Layout>
   );

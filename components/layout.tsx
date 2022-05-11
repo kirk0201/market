@@ -22,22 +22,31 @@ export default function Layout({
   };
   return (
     <div>
-      <div className="bg-white flex justify-center items-center max-w-lg font-semibold py-4 fixed w-full border-b">
+      <div className="bg-white flex justify-center items-center max-w-lg font-semibold py-4 px-4 fixed w-full border-b top-0">
         {canGoBack ? (
-          <span
+          <button
             onClick={goBackHandler}
-            className="fixed left-2 border px-2 py-1 rounded-full bg-blue-400 text-white hover:bg-blue-500 cursor-pointer"
+            className="border px-2 py-1 rounded-full bg-blue-400 text-white hover:bg-blue-500 cursor-pointer"
           >
             &larr;
-          </span>
+          </button>
         ) : null}
-        {title}
+        {title ? (
+          <span className={cls(canGoBack ? "mx-auto" : "", "")}>{title}</span>
+        ) : null}
       </div>
       <div className={cls("pt-10", hasTabBar ? "pb-12" : "")}>{children}</div>
       {hasTabBar ? (
         <nav className="bg-white w-full max-w-lg border-t pb-5 pt-5 px-10 fixed bottom-0 flex justify-between">
           <Link href="/">
-            <a className="flex flex-col justify-center items-center">
+            <a
+              className={cls(
+                "flex flex-col justify-center items-center",
+                router.pathname === "/"
+                  ? "text-blue-400"
+                  : "hover:text-gray-500 transition-colors"
+              )}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -56,7 +65,14 @@ export default function Layout({
             </a>
           </Link>
           <Link href="/community">
-            <a className="flex flex-col justify-center items-center">
+            <a
+              className={cls(
+                "flex flex-col justify-center items-center",
+                router.pathname === "/community"
+                  ? "text-blue-400"
+                  : "hover:text-gray-500 transition-colors"
+              )}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -75,7 +91,14 @@ export default function Layout({
             </a>
           </Link>
           <Link href="/chats">
-            <a className="flex flex-col justify-center items-center">
+            <a
+              className={cls(
+                "flex flex-col justify-center items-center",
+                router.pathname === "/chats"
+                  ? "text-blue-400"
+                  : "hover:text-gray-500 transition-colors"
+              )}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -94,7 +117,14 @@ export default function Layout({
             </a>
           </Link>
           <Link href="/live">
-            <a className="flex flex-col justify-center items-center">
+            <a
+              className={cls(
+                "flex flex-col justify-center items-center",
+                router.pathname === "/live"
+                  ? "text-blue-400"
+                  : "hover:text-gray-500 transition-colors"
+              )}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -113,7 +143,14 @@ export default function Layout({
             </a>
           </Link>
           <Link href="/profile">
-            <a className="flex flex-col justify-center items-center">
+            <a
+              className={cls(
+                "flex flex-col justify-center items-center",
+                router.pathname === "/profile"
+                  ? "text-blue-400"
+                  : "hover:text-gray-500 transition-colors"
+              )}
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"

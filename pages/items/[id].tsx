@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Button from "../../components/button";
 import Layout from "../../components/layout";
 import styles from "../styles/Home.module.css";
 
@@ -34,11 +35,9 @@ const ItemDetail: NextPage = () => {
               in there, and that ni**a Winston or anybody else is in there, you
               the first motherfucker to get shot. You understand?
             </p>
-            <div className="flex space-x-2">
-              <button className="flex-1 bg-blue-400 font-semibold text-white py-1 rounded-md focus:ring-2 focus:ring-offset-2 focus:bg-blue-500">
-                Talk to seller
-              </button>
-              <button className="p-3 bg-gray-50 text-gray-300 hover:text-gray-500 rounded-md">
+            <div className="flex items-center justify-between space-x-2">
+              <Button text="Talk to seller" large />
+              <button className="p-3 flex items-center justify-center bg-gray-50 text-gray-300 hover:text-gray-500 rounded-md">
                 <svg
                   className="h-6 w-6 "
                   xmlns="http://www.w3.org/2000/svg"

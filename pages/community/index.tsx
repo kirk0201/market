@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import FloattingButton from "../../components/floating-button";
 import Layout from "../../components/layout";
 
 const Community: NextPage = () => {
@@ -12,10 +13,10 @@ const Community: NextPage = () => {
               <span className="px-2 py-1 rounded-full text-xs font-semibold text-gray-700 bg-slate-300">
                 동네질문
               </span>
-              <span className="mt-2 text-gray-700">
+              <div className="mt-2 text-gray-700">
                 <span className="text-orange-500 font-semibold">Q.</span> What
                 is the best mandu restaurant?
-              </span>
+              </div>
               <div className="w-full mt-5 flex justify-between items-center text-xs text-gray-500 font-semibold">
                 <span>니꼬</span>
                 <span>18시간 전</span>
@@ -60,7 +61,7 @@ const Community: NextPage = () => {
           </Link>
         ))}
 
-        <button className="fixed right-5 bottom-40 border rounded-full p-2 shadow-md transition-colors bg-blue-300 text-white hover:bg-blue-500 hover:text-blue-200">
+        <FloattingButton href="/community/write">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -75,7 +76,7 @@ const Community: NextPage = () => {
               d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
             ></path>
           </svg>
-        </button>
+        </FloattingButton>
       </div>
     </Layout>
   );
