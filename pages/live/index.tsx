@@ -9,7 +9,7 @@ const Live: NextPage = () => {
     <Layout title="라이브" hasTabBar>
       <div className="py-16 space-y-8 divide-y-2 px-4">
         {[1, 2, 3, 4, 5, 6, 7].map((_, i) => (
-          <Link href={`/live/${i}`}>
+          <Link key={i} href={`/live/${i}`}>
             <a className="" key={i}>
               <div className="bg-slate-300 aspect-video"></div>
               <h3 className="font-semibold text-lg pt-2 text-gray-700">

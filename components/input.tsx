@@ -9,21 +9,21 @@ export default function Input({
   label,
   name,
   kind = "text",
+  register,
   ...rest
 }: InputProps) {
   return (
     <div>
       <label htmlFor={name} className="text-sm font-bold text-black-500 pt-4">
         {label}
-        {/* {method === "email" ? "Email address" : null}
-            {method === "phone" ? "Phone number" : null} */}
       </label>
       {kind === "text" ? (
         <input
           id={name}
+          {...register}
+          {...rest}
           className="appearance-none w-full border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-400 focus:border-blue-400"
           type="email"
-          {...rest}
           required
         />
       ) : null}
@@ -35,6 +35,8 @@ export default function Input({
           <input
             id={name}
             type="text"
+            {...register}
+            {...rest}
             className="appearance-none w-full border-gray-300 rounded-r-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-400 focus:border-blue-400"
             required
           />
@@ -49,6 +51,8 @@ export default function Input({
             className="pl-7 w-full border-gray-300 rounded-md shadow-md"
             id={name}
             type="text"
+            {...register}
+            {...rest}
             placeholder="0.00"
           />
           <div className="absolute right-0 pr-2 font-bold pointer-events-none">

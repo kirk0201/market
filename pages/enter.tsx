@@ -1,12 +1,21 @@
+import { NextPage } from "next";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import Button from "../components/button";
 import Input from "../components/input";
 import { cls } from "../libs/utils";
 
-export default function Enter() {
+interface EnterForm {
+  email?: string;
+  phone?: string;
+}
+
+const Enter: NextPage = () => {
+  const { register, watch } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
+  console.log(watch());
   return (
     <div className="mt-16 px-4">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
@@ -38,12 +47,19 @@ export default function Enter() {
             </button>
           </div>
         </div>
-        <form className="flex flex-col">
+        <form className="flex flex-col space-y-4">
           {method === "email" ? (
-            <Input label="Email" name="email" required type="email" />
+            <Input
+              register={register("email")}
+              label="Email"
+              name="email"
+              required
+              type="email"
+            />
           ) : null}
           {method === "phone" ? (
             <Input
+              register={register("phone")}
               label="Phone"
               name="phone"
               required
@@ -91,4 +107,6 @@ export default function Enter() {
       </div>
     </div>
   );
-}
+};
+
+export default Enter;
