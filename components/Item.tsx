@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PriceChange from "../libs/price";
+import PriceChange from "@libs/client/price";
 
 interface ItemProps {
   title: string;

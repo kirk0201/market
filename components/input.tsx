@@ -23,7 +23,6 @@ export default function Input({
           {...register}
           {...rest}
           className="appearance-none w-full border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-400 focus:border-blue-400"
-          type="email"
           required
         />
       ) : null}
@@ -34,7 +33,6 @@ export default function Input({
           </span>
           <input
             id={name}
-            type="text"
             {...register}
             {...rest}
             className="appearance-none w-full border-gray-300 rounded-r-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-400 focus:border-blue-400"
@@ -50,7 +48,6 @@ export default function Input({
           <input
             className="pl-7 w-full border-gray-300 rounded-md shadow-md"
             id={name}
-            type="text"
             {...register}
             {...rest}
             placeholder="0.00"

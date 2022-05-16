@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import Layout from "../../components/layout";
-import Message from "../../components/message";
+import Layout from "@components/layout";
+import Message from "@components/message";
 // aspect-video를 이용하여 비디오 화면처럼 자동으로 16:9 비율로 만듬
 
 const Stream: NextPage = () => {

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import Button from "../../components/button";
-import Input from "../../components/input";
-import Layout from "../../components/layout";
+import Button from "@components/button";
+import Input from "@components/input";
+import Layout from "@components/layout";
 
 //  label을 이용하여 input 타입 file 숨기기, accept 속성을 이용하여 image파일만 받기
 const Edit: NextPage = () => {

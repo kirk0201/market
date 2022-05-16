@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import FloattingButton from "../../components/floating-button";
-import Layout from "../../components/layout";
+import FloattingButton from "@components/floating-button";
+import Layout from "@components/layout";
 // aspect-video를 이용하여 비디오 화면처럼 자동으로 16:9 비율로 만듬
 
 const Live: NextPage = () => {

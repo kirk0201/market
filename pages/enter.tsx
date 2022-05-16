@@ -1,9 +1,11 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Button from "../components/button";
-import Input from "../components/input";
-import { cls } from "../libs/utils";
+import Button from "@components/button";
+import Input from "@components/input";
+import useMutation from "@libs/client/useMutation";
+import { cls } from "@libs/client/utils";
+import { useEffect } from "react";
 
 interface EnterForm {
   email?: string;
@@ -11,11 +13,26 @@ interface EnterForm {
 }
 
 const Enter: NextPage = () => {
-  const { register, watch } = useForm<EnterForm>();
+  const { register, reset, watch, handleSubmit } = useForm<EnterForm>();
+
+  const [accountSubmit, { loading, data, error }] =
+    useMutation("/api/users/enter");
+  const [submitting, setSubmitting] = useState(false);
   const [method, setMethod] = useState<"email" | "phone">("email");
-  const onEmailClick = () => setMethod("email");
-  const onPhoneClick = () => setMethod("phone");
-  console.log(watch());
+  const onEmailClick = () => {
+    reset();
+    setMethod("email");
+  };
+  const onPhoneClick = () => {
+    reset();
+    setMethod("phone");
+  };
+  const onValid = (validForm: EnterForm) => {
+    accountSubmit(validForm);
+  };
+  useEffect(() => {
+    console.log(watch());
+  });
   return (
     <div className="mt-16 px-4">
       <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
@@ -47,7 +64,10 @@ const Enter: NextPage = () => {
             </button>
           </div>
         </div>
-        <form className="flex flex-col space-y-4">
+        <form
+          onSubmit={handleSubmit(onValid)}
+          className="flex flex-col space-y-4"
+        >
           {method === "email" ? (
             <Input
               register={register("email")}

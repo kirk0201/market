@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import FloattingButton from "../components/floating-button";
-import Layout from "../components/layout";
+import FloattingButton from "@components/floating-button";
+import Layout from "@components/layout";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -11,8 +11,8 @@ const Home: NextPage = () => {
     <Layout title="Home" hasTabBar>
       <div className="flex px-4 flex-col space-y-5 py-10">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-          <Link href={`/items/${i}`}>
-            <a key={i} className="flex justify-between border-b pb-4">
+          <Link key={i} href={`/items/${i}`}>
+            <a className="flex justify-between border-b pb-4">
               <div className="flex space-x-4">
                 <div className="w-20 h-20 bg-gray-400 rounded-md" />
                 <div className="pt-2 flex flex-col">

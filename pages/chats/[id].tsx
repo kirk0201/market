@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import Layout from "../../components/layout";
-import Message from "../../components/message";
+import Layout from "@components/layout";
+import Message from "@components/message";
 // 중앙 정렬을 위한 다른 방법 inset-x-0 mx-auto
 const ChatDetail: NextPage = () => {
   return (

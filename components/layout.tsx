@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { cls } from "../libs/utils";
+import { cls } from "@libs/client/utils";
 
 interface LayoutProps {
   title?: string;
@@ -37,7 +37,10 @@ export default function Layout({
       </div>
       <div className={cls("pt-10", hasTabBar ? "pb-12" : "")}>{children}</div>
       {hasTabBar ? (
-        <nav className="bg-white w-full left-0 max-w-lg border-t pb-5 pt-5 px-10 fixed bottom-0 flex justify-between">
+        <nav
+          style={{ width: "100vw" }}
+          className="bg-white mx-auto max-w-lg border-t pb-5 pt-5 px-10 fixed bottom-0 flex justify-between"
+        >
           <Link href="/">
             <a
               className={cls(
