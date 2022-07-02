@@ -37,6 +37,7 @@ async function handler(
       body: `Your login token is ${random}`,
     });
   }
+
   return res.json({ ok: true });
 }
 

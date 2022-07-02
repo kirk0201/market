@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <Layout title="Home" hasTabBar>
+    <Layout title="홈" hasTabBar>
       <div className="flex px-4 flex-col space-y-5 py-10">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Link key={i} href={`/items/${i}`}>
@@ -17,10 +17,12 @@ const Home: NextPage = () => {
                 <div className="w-20 h-20 bg-gray-400 rounded-md" />
                 <div className="pt-2 flex flex-col">
                   <h3 className="text-sm font-bold text-gray-900">
-                    New iPhone 14
+                    Galaxy S50 팝니다
                   </h3>
-                  <span className="text-xs text-gray-500">Black</span>
-                  <span className="font-bold mt-1 text-gray-900">$95</span>
+                  <span className="text-xs text-gray-500">블랙</span>
+                  <span className="font-bold mt-1 text-gray-900">
+                    1,500,000원
+                  </span>
                 </div>
               </div>
               <div className="flex items-end space-x-4">

@@ -9,8 +9,8 @@ const Sold: NextPage = () => {
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
             id={i}
-            title="New Mac Book"
-            price={1650000}
+            title="Galaxy S50 팝니다"
+            price={1500000}
             comments={1}
             hearts={1}
           />

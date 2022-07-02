@@ -11,8 +11,8 @@ const Chats: NextPage = () => {
             <a className="flex px-4 cursor-pointer items-center space-x-4 py-3">
               <div className="w-12 h-12 bg-slate-300 rounded-full" />
               <div>
-                <p className="font-semibold text-gray-700">Steve Jebs</p>
-                <p className="text-sm text-gray-500">See you tomorrow</p>
+                <p className="font-semibold text-gray-700">스티브 잡스</p>
+                <p className="text-sm text-gray-500">네고 가능한가요?</p>
               </div>
             </a>
           </Link>

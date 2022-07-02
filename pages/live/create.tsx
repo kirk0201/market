@@ -6,13 +6,13 @@ import Textarea from "@components/textarea";
 
 const Create: NextPage = () => {
   return (
-    <Layout canGoBack title="Live Create">
+    <Layout canGoBack title="라이브 방송하기">
       <div className="px-4 py-16">
         <div className="space-y-2">
-          <Input label="Name" name="name" required />
-          <Input label="Price" name="price" kind="price" required />
-          <Textarea label="Description" name="description" required />
-          <Button text="Go Live" />
+          <Input label="이름" name="name" required />
+          <Input label="가격" name="price" kind="price" required />
+          <Textarea label="내용" name="description" required />
+          <Button text="라이브 시작하기" />
         </div>
       </div>
     </Layout>

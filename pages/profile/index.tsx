@@ -10,9 +10,7 @@ const Profile: NextPage = () => {
         <div className="flex items-center space-x-4 py-4">
           <div className="w-12 h-12 bg-slate-300 rounded-full" />
           <div className="flex flex-col">
-            <span className="font-semibold text-gray-700 text-sm">
-              Steve Jebs
-            </span>
+            <span className="font-semibold text-gray-700 text-sm">재현</span>
             <Link href={"/profile/edit"}>
               <a className="text-xs text-gray-400 font-semibold">
                 Edit profile &rarr;
@@ -91,7 +89,7 @@ const Profile: NextPage = () => {
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12  bg-slate-300 rounded-full" />
             <div className="">
-              <h4 className="font-semibold text-sm">니꼬</h4>
+              <h4 className="font-semibold text-sm">이재용</h4>
               <div className="flex">
                 <svg
                   className="text-yellow-400 h-5 w-5"
@@ -143,12 +141,8 @@ const Profile: NextPage = () => {
           </div>
           <div className="my-4">
             <p className="text-gray-700 font-medium">
-              Normally, both your asses would be dead as fucking fried chicken,
-              but you happen to pull this shit while I&apos;m in a transitional
-              period so I don&apos;t wanna kill you, I wanna help you. But I
-              can&apos;t give you this case, it don&apos;t belong to me.
-              Besides, I&apos;ve already been through too much shit this morning
-              over this case to hand it over to your dumb ass.
+              쿨거래 감사합니다. 덕분에 저렴하게 아이폰을 구했습니다! <br />
+              생활기스 빼고는 만족하며 사용 중입니다.
             </p>
           </div>
         </div>

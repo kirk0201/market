@@ -6,7 +6,7 @@ import Textarea from "@components/textarea";
 
 const Upload: NextPage = () => {
   return (
-    <Layout canGoBack title="Upload Product">
+    <Layout canGoBack title="글 작성">
       <div className="px-4 py-16">
         <div>
           <label className="cursor-pointer flex justify-center border-2 border-dashed py-16 rounded-md text-gray-300 hover:text-gray-500 hover:border-gray-500">
@@ -29,10 +29,10 @@ const Upload: NextPage = () => {
           </label>
         </div>
         <div className="space-y-2">
-          <Input label="Name" name="name" required />
-          <Input label="Price" name="price" required kind="price" />
-          <Textarea label="Description" name="description" required />
-          <Button text="Upload product" />
+          <Input label="이름" name="name" required />
+          <Input label="가격" name="price" required kind="price" />
+          <Textarea label="내용" name="description" required />
+          <Button text="글 올리기" />
         </div>
       </div>
     </Layout>

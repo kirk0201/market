@@ -9,8 +9,8 @@ const Favorite: NextPage = () => {
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
             id={i}
-            title="New Galaxy S22"
-            price={1050000}
+            title="Galaxy S50 팝니다"
+            price={1500000}
             comments={1}
             hearts={1}
           />

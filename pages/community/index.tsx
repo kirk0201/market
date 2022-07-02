@@ -14,11 +14,11 @@ const Community: NextPage = () => {
                 동네질문
               </span>
               <div className="mt-2 text-gray-700">
-                <span className="text-orange-500 font-semibold">Q.</span> What
-                is the best mandu restaurant?
+                <span className="text-orange-500 font-semibold">Q.</span>
+                이번에 아이폰으로 바꿔보려고 하는데 어디서 구매하는게 좋을까요?
               </div>
               <div className="w-full mt-5 flex justify-between items-center text-xs text-gray-500 font-semibold">
-                <span>니꼬</span>
+                <span>이재용</span>
                 <span>18시간 전</span>
               </div>
               <div className="flex space-x-5 text-gray-500 mt-3 py-2 border-t border-b w-full ">

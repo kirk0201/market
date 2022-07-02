@@ -13,7 +13,7 @@ const Live: NextPage = () => {
             <a className="" key={i}>
               <div className="bg-slate-300 aspect-video"></div>
               <h3 className="font-semibold text-lg pt-2 text-gray-700">
-                Let's try potatos
+                맥북 프로모션 중입니다. 많은 참여 부탁드립니다.
               </h3>
             </a>
           </Link>

@@ -43,7 +43,7 @@ export default function Input({
       {kind === "price" ? (
         <div className="flex items-center relative pb-3">
           <div className="absolute pl-3 pointer-events-none">
-            <span className="text-gray-500 text-sm ">$</span>
+            <span className="text-gray-500 text-sm "></span>
           </div>
           <input
             className="pl-7 w-full border-gray-300 rounded-md shadow-md"
@@ -53,7 +53,7 @@ export default function Input({
             placeholder="0.00"
           />
           <div className="absolute right-0 pr-2 font-bold pointer-events-none">
-            <span>USD</span>
+            <span>원</span>
           </div>
         </div>
       ) : null}
