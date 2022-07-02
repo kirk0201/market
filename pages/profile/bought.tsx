@@ -8,6 +8,7 @@ const Bought: NextPage = () => {
       <div className="flex px-4 flex-col space-y-5 py-10">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
+            key={i}
             title="Galaxy S50 팝니다"
             id={i}
             price={1500000}

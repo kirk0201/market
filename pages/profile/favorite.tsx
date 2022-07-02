@@ -8,6 +8,7 @@ const Favorite: NextPage = () => {
       <div className="flex px-4 flex-col space-y-5 py-10">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <Item
+            key={i}
             id={i}
             title="Galaxy S50 팝니다"
             price={1500000}
